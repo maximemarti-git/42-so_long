@@ -6,7 +6,7 @@
 #    By: mamarti <mamarti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/02 09:05:06 by mamarti           #+#    #+#              #
-#    Updated: 2026/01/29 12:34:56 by mamarti          ###   ########.fr        #
+#    Updated: 2026/01/29 13:29:00 by mamarti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,17 +28,17 @@ LDFLAGS		= 	-L$(MLX_DIR) -lmlx -lXext -lX11 -lm
 $(warning OS non reconnu, utilisation des flags Linux par défaut.)
 endif
 
-SRC			=	main.c map.c map_loader.c map_utils.c  map_checker.c \
-				path_checker.c game_loader.c game_utils.c textures_utils.c \
-				handle_error.c render_utils.c handle_move.c
+SRC	=	main.c map.c map_loader.c map_utils.c  map_checker.c path_checker.c \
+		game_loader.c game_utils.c textures_utils.c handle_error.c \
+		render_utils.c handle_move.c
 
-SRCBS		=	main_bonus.c map_bonus.c map_loader_bonus.c map_utils_bonus.c \
-				map_checker_bonus.c path_checker_bonus.c game_loader_bonus.c \
-				game_utils_bonus.c textures_utils_bonus.c handle_error_bonus.c \
-				render_utils_bonus.c handle_move_bonus.c anim_utils_bonus.c \
-				render_bonus.c mobs_utils_bonus.c
+SRCBS =	main_bonus.c map_bonus.c map_loader_bonus.c map_utils_bonus.c \
+		map_checker_bonus.c path_checker_bonus.c game_loader_bonus.c \
+		game_utils_bonus.c textures_utils_bonus.c handle_error_bonus.c \
+		render_utils_bonus.c handle_move_bonus.c anim_utils_bonus.c \
+		render_bonus.c mobs_utils_bonus.c
 
-SRC_DIR			=	src
+SRC_DIR		=	src
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 SRCBS_DIR	=	bonus/src
 SRCSBS		=	$(addprefix $(SRCBS_DIR)/, $(SRCBS))
