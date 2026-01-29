@@ -6,7 +6,7 @@
 /*   By: mamarti <mamarti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 12:57:11 by mamarti           #+#    #+#             */
-/*   Updated: 2025/12/22 16:07:11 by mamarti          ###   ########.fr       */
+/*   Updated: 2026/01/29 11:55:19 by mamarti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define SO_LONG_H
 
 # include "text.h"
-# include "../libft/includes/libft.h"
+# include "../libft/include/libft.h"
 
 # ifdef __linux__
 #  include "../minilibx-linux/mlx.h"

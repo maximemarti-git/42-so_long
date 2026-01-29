@@ -6,7 +6,7 @@
 #    By: mamarti <mamarti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/02 09:05:06 by mamarti           #+#    #+#              #
-#    Updated: 2025/12/12 16:38:33 by mamarti          ###   ########.fr        #
+#    Updated: 2026/01/29 12:34:56 by mamarti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,10 @@ SRCBS		=	main_bonus.c map_bonus.c map_loader_bonus.c map_utils_bonus.c \
 				render_utils_bonus.c handle_move_bonus.c anim_utils_bonus.c \
 				render_bonus.c mobs_utils_bonus.c
 
-DIR			=	srcs
-SRCS		=	$(addprefix $(DIR)/, $(SRC))
-BS_DIR		=	bonus/srcs
-SRCSBS		=	$(addprefix $(BS_DIR)/, $(SRCBS))
+SRC_DIR			=	src
+SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
+SRCBS_DIR	=	bonus/src
+SRCSBS		=	$(addprefix $(SRCBS_DIR)/, $(SRCBS))
 OBJ_DIR		=	objs
 OBJS		=	$(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 OBJSBS		=	$(addprefix $(OBJ_DIR)/, $(SRCBS:.c=.o))
@@ -49,14 +49,14 @@ DEPS		=	$(OBJS:.o=.d)
 DEPSBS		=	$(OBJSBS:.o=.d)
 NAME		=	so_long
 CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror -Iincludes -MMD -MP
+CFLAGS		=	-Wall -Wextra -Werror -Iinclude -MMD -MP
 LIBFT		=	libft/libft.a
 
-$(OBJ_DIR)/%.o: $(DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 				@mkdir -p $(OBJ_DIR)
 				$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR)/%.o: $(BS_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRCBS_DIR)/%.c
 				@mkdir -p $(OBJ_DIR)
 				$(CC) $(CFLAGS) -c $< -o $@
 

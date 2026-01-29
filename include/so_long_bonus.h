@@ -6,7 +6,7 @@
 /*   By: mamarti <mamarti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 12:57:11 by mamarti           #+#    #+#             */
-/*   Updated: 2025/12/12 15:12:45 by mamarti          ###   ########.fr       */
+/*   Updated: 2026/01/29 11:55:23 by mamarti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <sys/time.h>
 # include "text_bonus.h"
-# include "../libft/includes/libft.h"
+# include "../libft/include/libft.h"
 
 # ifdef __linux__
 #  include "../minilibx-linux/mlx.h"
